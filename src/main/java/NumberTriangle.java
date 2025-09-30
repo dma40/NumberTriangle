@@ -66,6 +66,17 @@ public class NumberTriangle {
         // for fun [not for credit]:
     }
 
+    public int maxSumPathHelper() {
+        if (right == null && left == null) {
+            return 0;
+        }
+
+        int leftMax = root + left.maxSumPathHelper();
+        int rightMax = root + right.maxSumPathHelper();
+
+        return Math.max(leftMax, rightMax);
+    }
+
 
     public boolean isLeaf() {
         return right == null && left == null;
@@ -133,12 +144,12 @@ public class NumberTriangle {
 
     public static void main(String[] args) throws IOException {
 
-        NumberTriangle mt = NumberTriangle.loadTriangle("input_tree.txt");
+        NumberTriangle nt = NumberTriangle.loadTriangle("input_tree.txt");
 
         // [not for credit]
         // you can implement NumberTriangle's maxPathSum method if you want to try to solve
         // Problem 18 from project Euler [not for credit]
-        mt.maxSumPath();
-        System.out.println(mt.getRoot());
+        nt.maxSumPath();
+        System.out.println(nt.getRoot());
     }
 }
