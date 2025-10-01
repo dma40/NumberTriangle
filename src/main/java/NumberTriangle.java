@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.*;
 
 /**
  * This is the provided NumberTriangle class to be used in this coding task.
@@ -67,7 +68,7 @@ public class NumberTriangle {
     }
 
     public int maxSumPathHelper() {
-        if (right == null && left == null) {
+        if (isLeaf()) {
             return 0;
         }
 
@@ -126,6 +127,7 @@ public class NumberTriangle {
         // will need to return the top of the NumberTriangle,
         // so might want a variable for that.
         NumberTriangle top = null;
+        List<NumberTriangle> currentRow = new ArrayList<>();
 
         String line = br.readLine();
         while (line != null) {
