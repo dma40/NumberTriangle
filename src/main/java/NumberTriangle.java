@@ -76,7 +76,11 @@ public class NumberTriangle {
      * Note: a NumberTriangle contains at least one value.
      */
     public void maxSumPath() {
-        // for fun [not for credit]:
+        int max = maxSumPathHelper();
+        
+        root = max;
+        right = null;
+        right = null;
     }
 
     public int maxSumPathHelper() {
