@@ -196,7 +196,10 @@ public class NumberTriangle {
         // [not for credit]
         // you can implement NumberTriangle's maxPathSum method if you want to try to solve
         // Problem 18 from project Euler [not for credit]
-        // nt.maxSumPath();
+        //nt.maxSumPath();
+        System.out.println(nt.getRoot());
+
+        nt.maxSumPath();
         System.out.println(nt.getRoot());
     }
 }
